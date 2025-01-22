@@ -1,0 +1,17 @@
+The following CSS code snippet exhibits an uncommon error related to the specificity of CSS selectors and inheritance:
+
+```css
+div {
+  color: blue;
+}
+
+p {
+  color: red;
+}
+
+div p {
+  color: green;
+}
+```
+
+The issue lies in understanding how the browser resolves conflicting styles.  While the `div p` selector is highly specific, it only affects paragraphs *directly* inside a `div`. If there's a paragraph nested deeper, the inheritance from the parent might unexpectedly override the specific style.
