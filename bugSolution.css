@@ -1,0 +1,42 @@
+To solve this issue, we need to make sure the style is applied appropriately to all cases. Here are two possible solutions:
+
+**Solution 1 (More Specific Selector):**
+
+```css
+div {
+  color: blue;
+}
+
+p {
+  color: red;
+}
+
+div p {
+  color: green;
+}
+div div p { /* Add a more specific selector for nested paragraphs*/
+  color: green;
+}
+```
+
+**Solution 2 (Explicitly Style Nested Paragraphs):**
+
+```css
+div {
+  color: blue;
+}
+
+p {
+  color: red;
+}
+
+div p {
+  color: green;
+}
+
+div div p {
+  color: purple; /*Add a specific color for the deeply nested paragraph*/
+}
+```
+
+By adding more specific selectors or styling nested paragraphs directly, we ensure consistency across all scenarios.
